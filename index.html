@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset = "UTF-8">
+        <!-- <link rel="stylesheet" href="./style.css"> -->
+        <script src="./follow-along.js" defer></script> 
+        <!-- when index loads, the script is in the head so it runs before the DOM nodes are parsed and created. 
+        the nodes have to be parsed and created first, then the script needs to run. you can either put the script 
+        at the bottom of this file or use defer. The defer keyword loads the javascript after the HTML is parsed -->
+        <title>DOM Manipulation and Events</title>
+    </head>
+
+    <body>
+        <h1>THE TITLE OF YOUR WEBPAGE</h1>
+        <div id="container"></div>
+
+        <!-- less than ideal bc we can only have one onclick per element. also this clutters our html tag with javascript -->
+        <button onclick="alert('Hello World')">Click Me</button>
+
+        <!-- the javascript is in a separate file but still there is a problem with only 1 onclick property per element -->
+        <button id="btn">Click Me Also</button> 
+
+        <!-- with id btn2, the javascript on the other file uses an event listener -->
+        <button id="btn2">Clck Me Too</button>
+
+        <!-- using a named function called alertFunction for the 3 buttons below. the function is in another file -->
+        <button onclick="alertFunction()">Click Me Baby</button>
+
+        <button id="btn3">Click Me Baby Also</button>
+
+        <button id="btn4">Click Me Baby Too</button>
+
+        <button id="callback1">Call Back 1</button>
+
+        <div id="container2">
+            <button id="1">Listener Node List</button>
+            <button id="2">Listener Node List</button>
+            <button id="3">Listener Node List</button>
+        </div>
+
+
+    </body>
+
+</html>
